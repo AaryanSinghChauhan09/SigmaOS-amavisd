@@ -1,64 +1,50 @@
-# SigmaOS-amavisd Component Wiki
+# SigmaOS-SigmaOS-amavisd Component Wiki
 
 ## Overview
-SigmaOS-amavisd provides Amavis email content scanner and anti-virus support for the SigmaOS operating system. It demonstrates the email filtering subsystem and content analysis within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic email initialization.
+SigmaOS-SigmaOS-amavisd provides GitHub description is a placeholder; component scope remains unclassified. for the SigmaOS operating system. It demonstrates the subsystem and integration within the SigmaOS ecosystem, following the principles of clear abstraction and deterministic initialization.
 
 ## Principles
 - Single Responsibility
-- Email Abstraction
-- Fail-Fast on Email Initialization Errors
-- Deterministic Email Setup
-- Clear Abstraction Over Email APIs
-- Composition over Inheritance for email extensions
+- SigmaOS-amavisd Abstraction
+- Fail-Fast on SigmaOS-amavisd Initialization Errors
+- Deterministic SigmaOS-amavisd Setup
+- Clear Abstraction Over SigmaOS-amavisd APIs
+- Composition over Inheritance for SigmaOS-amavisd extensions
 
 ## Architecture
-SigmaOS-amavisd follows an email pattern:
-- **Email Core**: Provides Amavis content scanning, virus detection, and email analysis
-- **Content Analysis**: Supports email content inspection, spam detection, and virus signature scanning
-- **Email Filtering**: Supports email filtering, spam classification, and virus quarantine
-- **Error Handling**: Fail-fast on invalid email configurations or unsupported email types
+SigmaOS-SigmaOS-amavisd follows a SigmaOS-amavisd pattern:
+- **SigmaOS-amavisd Core**: Provides SigmaOS-amavisd support, SigmaOS-amavisd management, and SigmaOS-amavisd tracking
+- **Management**: Supports SigmaOS-amavisd management, SigmaOS-amavisd configuration, and SigmaOS-amavisd lifecycle
+- **Tracking**: Supports SigmaOS-amavisd status, SigmaOS-amavisd tracking, and SigmaOS-amavisd lifecycle
+- **Error Handling**: Fail-fast on invalid SigmaOS-amavisd configurations or unsupported SigmaOS-amavisd types
 
 ## API
 The component provides the following public APIs:
-- `email::scan::message(message)` - Scan an email message for threats and spam
-- `email::virus::detect(attachment)` - Detect viruses in email attachments
-- `email::spam::classify(email)` - Classify an email as spam or ham
-- `email::status::filter()` - Get email filter status and threat level
-- Error types for email failure scenarios or unsupported email types
+-  - Manage a SigmaOS-amavisd by given configuration
+-  - Register a SigmaOS-amavisd by given name
+-  - Get SigmaOS-amavisd status and SigmaOS-amavisd availability
+-  - Track SigmaOS-amavisd management and SigmaOS-amavisd tracking
+- Error types for SigmaOS-amavisd failure scenarios or unsupported SigmaOS-amavisd types
 
 ## Test Structure (Arrange-Act-ASSERT)
 All tests follow the AAA pattern:
-1. **Arrange**: Set up test environment with specific email configuration
-2. **Act**: Execute the code under test (message scanning, virus detection)
-3. **Assert**: Verify the expected email results
+1. **Arrange**: Set up test environment with specific SigmaOS-amavisd configuration
+2. **Act**: Execute the code under test (SigmaOS-amavisd init, SigmaOS-amavisd management)
+3. **Assert**: Verify the expected SigmaOS-amavisd results
 
 Example:
-```rust
-#[test]
-fn test_email_scan_aaa() {
-    // Arrange
-    let test_message = Email::new().with_subject("test").with_body("test body");
-    
-    // Act
-    let result = email::scan::message(test_message);
-    
-    // Assert
-    assert!(result.is_ok());
-    let scanned = result.unwrap();
-    assert!(scanned.is_clean());
-}
-```
+
 
 ## Development
-- Follows Rust best practices with `#![forbid(unsafe_code)]`
-- Email initialization is best-effort; gracefully degrades on unsupported configurations
-- Comprehensive error types for all email failure scenarios
-- Unit tests provided for message scanning and virus detection
-- Integration tests for full email system with actual email content analysis
+- Follows Rust best practices with 
+- SigmaOS-amavisd initialization is best-effort; gracefully degrades on unsupported configurations
+- Comprehensive error types for all SigmaOS-amavisd failure scenarios
+- Unit tests provided for SigmaOS-amavisd management and configuration
+- Integration tests for full SigmaOS-amavisd system with actual SigmaOS-amavisd integration
 
 ## TODO
-- Add support for additional threat types (phishing, malware, spam variants)
-- Expand content analysis capabilities (header analysis, body analysis, attachment scanning)
-- Add filtering features (spam scoring, virus quarantine, email classification)
-- Create integration tests with actual email content analysis systems
-- Implement email persistence and filter state management
+- Add support for additional SigmaOS-amavisd types
+- Expand SigmaOS-amavisd capabilities (SigmaOS-amavisd features, SigmaOS-amavisd configurations, SigmaOS-amavisd tracking)
+- Add lifecycle features (SigmaOS-amavisd tracking, SigmaOS-amavisd lifecycle, SigmaOS-amavisd propagation)
+- Create integration tests with actual SigmaOS-amavisd systems and SigmaOS-amavisd integration
+- Implement SigmaOS-amavisd persistence and SigmaOS-amavisd state management
